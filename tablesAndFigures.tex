@@ -1,0 +1,274 @@
+\documentclass{article}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{letterpaper}
+\usepackage[pdftex]{graphicx}
+\usepackage[authoryear, colon]{natbib}
+\usepackage{lineno}
+\usepackage{parskip}
+\usepackage{authblk}
+\usepackage{draftwatermark}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{epstopdf}
+\usepackage[justification=centering]{caption}
+\DeclareGraphicsExtensions{.jpg, .png, .tiff, .pdf}
+\SetWatermarkLightness{0.85}
+\SetWatermarkScale{3}
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % %
+% this is code to produce the figures and tables for the long-term EWM treatment success paper
+% % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/ewmLakesWI.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Map of lakes used in this study. EWM abundance samples were taken from these 15 lakes within 11 counties in WI. Lakes were sampled for at least 7 years (from 2007-2013) to determine long-term trends of EWM over time.}
+	\label{fig:map}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/trtSuccessFourPaneledFig.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Scatterplots of treatment success ($S_{T}$) against pH (A), conductivity (B), ORP (C), and TDS (D). $S_{T}$ was correlated with all variables plotted here -- pH ($p < 0.01, R^2 = 0.37$), conductivity ($p < 0.05, \Delta\mathrm{AIC_{c}} = 5.2, S = 80.37, d.f = 13$), ORP ($p<0.001, R^{2}=0.62$), and TDS ($p<0.05, \Delta\mathrm{AIC_{c}}=5.6, S = 78.21, d.f. = 13$). The exponential equation used as regression formula for conductivity and ORP is shown as well as the root mean square error (S). Negative $S_{T}$ represents treatments successful at decreasing and controlling EWM; therefore, more successful treatments occurred in lakes with lower pH, low conductivity, high ORP, and low TDS.}
+	\label{fig:trtSuccessPanels}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/dtwDistClusters.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Trends in EWM frequency of occurrence (\% FOO) across the timeline of the study. Each line represents a lake's EWM abundance across time, and lakes were clustered using complete linkage cluster analysis based on dynamic time warping (DTW) distance and four clusters. Groups are defined as lakes where treatments: 1) were highly successful, 2) maintained a low level of EWM, 3) exhibited a moderate decrease, or 4) were unsuccessful.}
+	\label{fig:distClusters}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/pcoaPlot.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Principle Coordinates Analysis (PCoA) of dynamic time warping (DTW) distance of EWM abundance in lakes with overlay of environmental variables. Points are colored according to groups in complete linkage clustering (Fig.~\ref{fig:distClusters}). Blue points are the ``highly successful" treatment lakes, green are ``moderate decreasers", gray are ``low level" of EWM, and red is ``unsuccessful". We \emph{post hoc} fit environmental parameters onto the ordination. Only significant environmental parameters ($p\leq0.05$) based on permutation tests are included. A general gradient of the treatment success metric exists from bottom to top of the ordination plot with more successful treatments towards the bottom. Conductivity (Cond), total dissolved solids (TDS), and residential density (ResDens) are all negatively correlated with the highly successful treatments while ORP is positively correlated. Surface area (SA) is relatively uncorrelated with the treatment success gradient, but perhaps could be a spurious result as the one unsuccessful lake also had the greatest surface area.}
+	\label{fig:pcoaPlot}
+\end{figure}
+
+\begin{landscape}
+\begin{table}[t]
+\centering
+\captionsetup{justification=raggedright}
+\caption{Locations and physical characteristics of lakes included in the study. WBIC refers to water body identification code and residential density is the number of buildings adjacent to the lake per km of shoreline.}
+\label{tab:lakeInfo	}
+\begin{tabular}{@{}lllllp{19mm}p{25mm}p{25mm}l@{}}
+\toprule
+Lake & County & WBIC & Latitude & Longitude & \begin{tabular}{ll} Surface Area \\ (ha) \end{tabular} & \begin{tabular}{ll} Shoreline Length \\ (km) \end{tabular} & \begin{tabular}{ll} Max Lake Depth \\ (m) \end{tabular} & \begin{tabular}{ll} Res. Density \\ (buildings km$^{-1}$) \end{tabular} \\ 
+\midrule
+Arrowhead & Vilas & 1541500 & 45.91 & -89.69 & 38.85 & 3.22 & 13.11 & 76.43 \\ 
+  Berry & Oconto & 418300 & 44.89 & -88.48 & 84.58 & 5.31 & 8.23 & 47.29 \\ 
+  Connors & Sawyer & 2275100 & 45.75 & -90.74 & 165.92 & 7.56 & 24.99 & 26.70 \\ 
+  Kathan & Oneida & 1598300 & 45.87 & -89.32 & 86.60 & 5.79 & 4.57 & 15.20 \\ 
+  Kettle Moraine & Fond Du Lac & 43900 & 43.65 & -88.21 & 84.58 & 4.83 & 9.14 & 40.76 \\ 
+  Little Green & Green Lake & 162500 & 43.74 & -88.98 & 186.96 & 6.76 & 8.53 & 57.46 \\ 
+  Loon & Shawano & 323800 & 44.83 & -88.51 & 132.33 & 4.35 & 6.71 & 47.08 \\ 
+  Lulu & Shawano & 324000 & 44.84 & -88.50 & 14.97 & 1.61 & 3.96 & 35.40 \\ 
+  Round & Burnett & 2640100 & 45.66 & -92.58 & 84.17 & 5.15 & 8.23 & 38.21 \\ 
+  Sandbar & Bayfield & 2494900 & 46.37 & -91.53 & 51.40 & 3.22 & 14.94 & 29.77 \\ 
+  Seven Island & Lincoln & 1490300 & 45.42 & -89.47 & 54.63 & 5.47 & 9.45 & 30.76 \\ 
+  Silver & Vilas & 1599800 & 45.92 & -89.24 & 23.07 & 2.25 & 5.79 & 29.88 \\ 
+  Tomahawk & Bayfield & 2501700 & 46.36 & -91.52 & 53.01 & 4.67 & 12.80 & 14.43 \\ 
+  Turtle & Walworth & 795100 & 42.73 & -88.68 & 57.06 & 3.70 & 9.14 & 37.08 \\ 
+  Underwood & Oconto & 519700 & 45.04 & -88.24 & 18.21 & 2.09 & 11.28 & 39.61 \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}
+\centering
+\captionsetup{justification=raggedright}
+\caption{Limnological and benthic substrate of lakes in included in this study. Cond stands for conductivity in mS cm$^{-1}$ adjusted for temperature to $25$\textdegree.}
+\label{tab:wqVars}
+\begin{tabular}{@{}llllp{14mm}p{12mm}p{13mm}lp{15mm}p{15mm}ll@{}}
+\toprule
+Lake & Secchi (m) & \% Sand & \% Rock & \% Muck & \begin{tabular}{ll} Chl-\emph{a} \\ ($\mu$ L$^{-1}$) \end{tabular} & \begin{tabular}{ll} Total P \\ ($\mu$ L$^{-1}$) \end{tabular} & pH & \begin{tabular}{ll} Cond. \\ (mS cm$^{-1}$) \end{tabular} & \begin{tabular}{ll} Turbidity \\ (NTU) \end{tabular} & \begin{tabular}{ll} DO \\ (mg L$^{-1}$) \end{tabular} & \begin{tabular}{ll} TDS \\ (g L$^{-1}$) \end{tabular} \\ 
+\midrule
+Arrowhead & 4.15 & 0.65 & 0.02 & 0.33 & -- & -- & 8.51 & 0.10 & 3.60 & 6.84 & 0.06 \\ 
+  Berry & 3.56 & 0.28 & 0.00 & 0.72 & 2.97 & 12.67 & 8.77 & 0.14 & 0.00 & 7.87 & 0.10 \\ 
+  Connors & 3.68 & 0.47 & 0.16 & 0.37 & 4.24 & 17.65 & 7.89 & 0.09 & 0.10 & 7.06 & 0.06 \\ 
+  Kathan & 1.22 & 0.16 & 0.02 & 0.82 & 7.91 & 27.31 & 6.59 & 0.09 & 15.30 & 6.16 & 0.05 \\ 
+  Kettle Moraine & 3.01 & 0.02 & 0.04 & 0.94 & -- & -- & 8.80 & 0.26 & 2.50 & 9.87 & 0.16 \\ 
+  Little Green & 1.68 & 0.08 & 0.04 & 0.87 & -- & -- & 8.51 & 0.40 & 7.50 & 7.78 & 0.24 \\ 
+  Loon & 1.71 & 0.28 & 0.00 & 0.72 & 8.17 & 31.13 & 7.12 & 0.13 & 6.90 & 7.34 & 0.09 \\ 
+  Lulu & 2.91 & 0.02 & 0.00 & 0.98 & -- & -- & 7.97 & 0.19 & 1.00 & 5.94 & 0.13 \\ 
+  Round & 1.45 & 0.38 & 0.14 & 0.48 & -- & -- & 8.89 & 0.18 & 14.60 & 10.24 & 0.13 \\ 
+  Sandbar & 5.29 & 0.62 & 0.02 & 0.36 & 1.93 & 10.14 & 7.55 & 0.06 & 0.20 & 6.63 & 0.04 \\ 
+  Seven Island & 3.90 & 0.20 & 0.09 & 0.71 & 3.32 & 10.85 & 7.40 & 0.04 & 1.70 & 8.23 & 0.02 \\ 
+  Silver & 2.96 & 0.14 & 0.00 & 0.86 & -- & -- & 8.03 & 0.19 & 0.50 & 6.38 & 0.13 \\ 
+  Tomahawk & 4.20 & 0.28 & 0.01 & 0.71 & 3.61 & 12.86 & 8.72 & 0.06 & 0.00 & 7.37 & 0.04 \\ 
+  Turtle & 2.88 & 0.14 & 0.01 & 0.86 & 6.85 & 21.40 & 8.47 & 0.52 & 4.50 & 8.89 & 0.32 \\ 
+  Underwood & 5.64 & 0.18 & 0.00 & 0.82 & -- & -- & 8.10 & 0.11 & 0.00 & 9.81 & 0.07 \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+%\centering
+\begin{longtable}[l]{lp{14mm}Hp{10mm}HHp{14mm}p{9mm}p{26mm}p{18mm}lp{14mm}p{8mm}l}
+\captionsetup{justification=raggedright} \\
+\caption{Management histories for lakes included in study throughout the sampling period. Scale refers to large or small scale treatments. Herbicide refers to the type of herbicide used whereas product refers to the specific name-brand of herbicide.} \\
+\\
+\midrule
+\endfirsthead
+\multicolumn{11}{l}{\parbox{\LTcapwidth}{Table~\ref{tab:managementHistory} (cont'd.)}} \\
+\toprule
+Lake & \begin{tabular}{ll} Date \\ Treated \end{tabular} & \begin{tabular}{ll} Permit \\ Area \\ (ha) \end{tabular} & \begin{tabular}{ll} Area \\ Treated \\ (ha) \end{tabular} & \begin{tabular}{ll} \# \\ Trt. \\ Areas \end{tabular} & \begin{tabular}{ll} Avg. Trt. \\ Size (ha) \end{tabular} & \begin{tabular}{ll} \% Surf. \\ Area \\ Treated \end{tabular} & Scale & Herbicide & Product & Amount & \begin{tabular}{ll} Amount \\ Units \end{tabular} & Conc. & \begin{tabular}{ll} Conc. \\ Units \end{tabular} \\
+\midrule
+\endhead
+% % % % arrowhead
+  Arrowhead & 5/15/09 & 1.25 & 1.25 & 3 & 0.40 & 3.20 & Small & Granular 2,4-D & Navigate & 435 & lbs & 140 & Lbs. per acre \\ 
+  Arrowhead & 6/1/10 & 1.62 & 1.13 &   2 & 0.57 & 2.90 & Small & Granular 2,4-D & Navigate & 475 & lbs & 170 & Lbs. per acre \\ 
+  Arrowhead & 6/3/11 & 0.65 & 0.65 &   3 & 0.20 & 1.70 & Small & Granular 2,4-D & Navigate & 308 & lbs & 193 & Lbs. per acre \\
+% % % % berry
+  Berry & 10/25/07 &  & 1.54 &   6 & 0.24 & 1.80 & Small & Granular 2,4-D & Navigate & 500 & lbs & 133 & Lbs. per acre \\ 
+  Berry & 6/16/08 & 1.21 & 0.53 &   4 & 0.12 & 0.60 & Small & Granular 2,4-D & Navigate & 200 & lbs & 152 & Lbs. per acre \\ 
+  Berry & 10/14/10 & 0.73 & 0.73 &   1 & 0.73 & 0.90 & Small & Granular 2,4-D & Navigate & 375 & lbs & 208 & Lbs. per acre \\ 
+  Berry & 6/9/11 & 8.09 & 0.77 &   2 & 0.40 & 0.90 & Small & Granular 2,4-D & Navigate & 250 & lbs & 132 & Lbs. per acre \\ 
+  Berry & 5/10/12 & 3.60 & 3.60 &   1 & 3.60 & 4.30 & Small & Liquid 2,4-D & DMA IV & 142.5 & gallons & 3 & ppm \\   
+% % % % berry
+  Connors & 06/13/05 & 16.19 & 12.99 &   7 & 1.86 & 7.80 & Small & Granular 2,4-D & Navigate & 2800 & lbs & 87 & Lbs. per acre \\ 
+  Connors & 7/24/06 & 2.43 & 2.43 &   1 & 2.43 & 1.50 & Small & Granular 2,4-D & Navigate & 900 & lbs & 150 & Lbs. per acre \\ 
+  Connors & 6/4/07 & 3.97 & 3.97 &   5 & 0.81 & 2.40 & Small & Granular 2,4-D & Navigate & 1470 & lbs & 150 & Lbs. per acre \\ 
+  Connors & 5/29/09 & 10.12 & 8.26 &   6 & 1.38 & 5.00 & Small & Granular 2,4-D & Navigate & 3570 & lbs & 175 & Lbs. per acre \\ 
+  Connors & 6/1/10 & 7.69 & 6.72 &   8 & 0.85 & 4.00 & Small & Granular 2,4-D & Navigate & 2905 & lbs & 175 & Lbs. per acre \\ 
+  Connors & 6/28/11 & 1.21 & 0.20 &   3 & 0.08 & 0.10 & Small & Granular 2,4-D & Navigate & 85 & lbs & 170 & Lbs. per acre \\ 
+  Connors & 05/23/12 & 2.02 & 1.62 &   9 & 0.16 & 1.00 & Small & Granular 2,4-D & Navigate & 1232.1 & lbs & 310 & Lbs. per acre \\ 
+  Connors & 7/24/13 & 1.62 & 0.04 &  11 & 0.00 & 0.00 & Small & Granular 2,4-D & Navigate & 54 & lbs & 386 & Lbs. per acre \\ 
+  Connors & 07/09/14 & 1.21 & 0.73 &   6 & 0.12 & 0.40 & Small & Granular 2,4-D & Sculpin G & 762.6 & lbs & 422 & Lbs. per acre \\   
+% % % % Kathan
+  Kathan & 05/13/10 & 46.54 & 46.54 &   1 & 46.54 & 53.70 & Large & Liquid 2,4-D & DMA IV & 194.5 & gallons & 0.5 & ppm \\ 
+% % % % Kettle moraine
+  Kettle Moraine & 04/18/05 &  & 8.09 &  1 & 8.09 & 9.6 & Small & Liquid Endothall & Aquathol K & 80 & gallons &  &  \\ 
+  Kettle Moraine & 05/02/06 & 57.06 & 57.06 &   2 & 28.53 & 67.50 & Large & Granular 2,4-D & Navigate & 14100 & lbs & 100 & Lbs. per acre \\ 
+  Kettle Moraine & 05/08/07 & 56.66 & 53.54 &   7 & 7.65 & 63.30 & Large & Granular 2,4-D & Navigate & 11700 & lbs & 100 & Lbs. per acre \\ 
+  Kettle Moraine & 05/08/07 & 56.66 & 53.54 &   7 & 7.65 & 63.30 & Large & Liquid 2,4-D & DMA IV & 27.5 & gallons &   &  \\ 
+  & & & & & & &  & Liquid Endothall & Aquathol K & 55 & gallons &  & \\ 
+  Kettle Moraine & 5/8/08 & 55.44 & 16.19 &   1 & 16.19 & 19.10 & Large & Liquid 2,4-D & DMA IV & 70 & gallons & 0.5 & ppm \\ 
+  & & & & & & &  & Liquid Endothall & Aquathol K & 135 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 5/11/09 & 55.44 & 52.61 &   6 & 8.78 & 62.20 & Large & Liquid 2,4-D & DMA IV & 100 & gallons & 0.1 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 360 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 4/26/10 & 36.83 & 36.83 &   9 & 4.09 & 43.50 & Large & Liquid 2,4-D & DMA IV & 240 & gallons & 0.25 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 305 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 5/10/11 & 24.69 & 24.69 &  10 & 2.47 & 29.20 & Large & Liquid 2,4-D & DMA IV & 245 & gallons & 0.25 & ppm \\
+
+\bottomrule
+
+  Kettle Moraine & 5/10/11 & 24.69 & 24.69 &  10 & 2.47 & 29.20 & Large & Liquid Endothall & Aquathol K & 205 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 04/20/12 & 15.05 & 39.38 &  16 & 2.47 & 46.60 & Large & Liquid 2,4-D & DMA IV & 295 & gallons & 0.3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 302.5 & gallons & 2 & ppm \\  
+  Kettle Moraine & 5/15/13 & 33.10 & 33.10 &   2 & 16.55 & 39.10 & Large & Liquid 2,4-D & DMA IV & 290 & gallons & 0.3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 380 & gallons & 1.6 & ppm \\   
+  Kettle Moraine & 5/22/14 & 35.33 & 35.33 &   2 & 17.68 & 41.80 & Large & Liquid 2,4-D & DMA IV & 290 & gallons & 0.26 & ppm \\ 
+  Kettle Moraine & 5/22/14 & 35.33 & 35.33 &   2 & 17.68 & 41.80 & Large & Liquid Endothall & Aquathol K & 751 & gallons & 2.45 & ppm \\ 
+% % % % Little Green
+  Little Green & \begin{tabular}{ll} 05/16/05 \\ 08/15/05 \end{tabular} &  & 19.83 &   9 & 2.19 & 10.60 & Large & Granular 2,4-D & Navigate & 600 & lbs & 100 & Lbs. per acre \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 195 & gallons &  & \\
+  Little Green & 05/09/06 & 33.91 & 33.91 &  10 & 3.40 & 18.10 & Large & Liquid 2,4-D & Weeder 64 & 3 & gallons &  & \\ 
+  & & & & & & & & Granular 2,4-D & Navigate & 10250 & lbs & 125 & Lbs. per acre \\ 
+  Little Green & 05/21/07 & 40.46 & 43.98 & 9 & 4.90 & 23.5 & Large & Liquid 2,4-D & Weeder 64 & 152 & gallons &  & \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 260.9 & gallons &  & \\ 
+  Little Green & 06/09/08 & 36.42 & 36.42 & 2 & 18.21 & 19.5 & Large & Liquid 2,4-D & Weeder 64 & 20 & gallons &  & \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 270 & gallons &  & \\   
+  Little Green & 05/15/09 & 21.04 & 20.96 & 8 & 2.63 & 11.2 & Large & Liquid 2,4-D & DMA IV & 125 & gallons &  & \\   
+  & & & & & & & & Liquid Endothall & Aquathol K & 155 & gallons &  & \\        
+  Little Green & 05/10/10 & 21.04 & 19.14 & 10 & 1.90 & 10.2 & Large & Liquid 2,4-D & DMA IV & 145.5 & gallons &  & \\
+  & & & & & & & & Liquid Endothall & Aquathol K & 69 & gallons &  & \\  
+  Little Green & 05/18/11 & 21.45 & 21.45 & 6 & 3.56 & 11.5 & Large & Liquid 2,4-D & \begin{tabular}{ll} DMA IV \& \\ Weedar 64 \end{tabular} & 130 & gallons &  & \\  
+  & & & & & & & & Liquid Endothall & Aquathol K & 106.8 & gallons &  & \\
+  Little Green & 4/24/12 & 34.40 & 31.48 &   7 & 4.49 & 16.80 & Large & Liquid 2,4-D & DMA IV & 172 & gallons & 1 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 148 & gallons & 1 & ppm \\ 
+  Little Green & 6/28/13 & 7.28 & 4.05 &   5 & 0.81 & 2.20 & Small & Liquid 2,4-D & DMA IV & 42 & gallons & 2 & ppm \\ 
+  & & & & & & & & Diquat & Harvester & 4 & gallons & 1 & gal acre$^{-1}$ \\ 
+  Little Green & \begin{tabular}{ll} 05/13/14 \\ 06/25/14 \end{tabular} & 10.97 & 7.28 &   5 & 1.46 & 3.90 & Small & Liquid 2,4-D & DMA IV & 73 & gallons & 2 & ppm \\
+
+\bottomrule
+\\  
+  
+  Little Green & \begin{tabular}{ll} 05/13/14 \\ 06/25/14 \end{tabular} & 10.97 & 7.28 &   5 & 1.46 & 3.90 & Small & Liquid Endothall & Aquathol K & 50 & gallons & 1.5 & ppm \\  
+  & & & & & & & & Diquat & Harvester & 7 & gallons & 1.25 & gal acre$^{-1}$ \\ 
+% % % % Loon
+  Loon & 5/31/05 & 11.25 & 16.19 &  11 & 1.46 & 12.20 & Large & Granular 2,4-D & Navigate & 3400 & lbs & 935 & Lbs. per acre \\  
+  Loon & 5/15/06 & 21.04 & 25.01 &  &  & 18.90 & Large & Liquid 2,4-D & Weeder 64 & 77.5 & gallons & 0.5 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 155 & gallons & 1 & ppm \\ 
+  Loon & 05/02/07 & 35.61 & 35.61 & 8 & 4.45 & 26.90 & Large & Liquid 2,4-D & DMA IV & 180 & gallons &  & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 370 & gallons &  & ppm \\ 
+  Loon & 5/12/08 & 27.68 & 27.68 &   6 & 4.61 & 20.90 & Large & Liquid 2,4-D & DMA IV & 222.5 & gallons & 0.75 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 448 & gallons & 1.5 & ppm \\ 
+  Loon & 5/4/09 & 28.33 & 27.68 &   6 & 4.61 & 20.90 & Large & Granular 2,4-D & Navigate & 1450 & lbs & 81 & Lbs. per acre \\ 
+  & & & & & & & & Liquid 2,4-D & DMA IV & 139 & gallons & 0.5 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 278 & gallons & 1 & ppm \\ 
+  & & & & & & & & Granular Endothall & Aquathol Super K & 550 & lbs & 31 & lbs \\ 
+  Loon & 4/15/10 & 27.52 & 27.52 &   6 & 4.57 & 20.80 & Large & Liquid 2,4-D & DMA IV & 392.4 & gallons & 1.05 & ppm \\
+  Loon & 4/15/10 & 27.52 & 27.52 &   6 & 4.57 & 20.80 & Large & Liquid Endothall & Aquathol K & 374.1 & gallons & 1 & ppm \\ 
+  Loon & 4/17/12 & 35.45 & 35.45 &   7 & 5.06 & 26.80 & Large & Liquid 2,4-D & DMA IV & 645.6 & gallons & 1.89 & ppm \\ 
+  Loon & 5/15/13 & 35.45 & 35.45 &   7 & 5.06 & 26.80 & Large & Liquid 2,4-D & DMA IV & 550 & gallons & 1.14 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 695 & gallons & 1.44 & ppm \\ 
+% % % % Lulu
+  Lulu & 06/17/05 & 0.81 & 0.32 &   1 & 0.32 & 2.0 & Small & Granular 2,4-D & Navigate & 88 & lbs &  &  \\ 
+  Lulu & 05/30/06 & 0.81 & 0.32 &   1 & 0.32 & 2.1 & Small & Granular 2,4-D & Navigate & 78 & lbs &  &  \\ 
+  Lulu & 5/18/07 & 0.81 & 0.08 &   1 & 0.08 & 0.40 & Small & Granular 2,4-D & Navigate & 15 & lbs & 100 & Lbs. per acre \\ 
+  Lulu & 5/19/08 & 0.81 & 0.08 &   1 & 0.08 & 0.50 & Small & Granular 2,4-D & Navigate & 28 & lbs & 147 & Lbs. per acre \\ 
+  Lulu & 5/28/09 & 0.81 & 0.12 &   1 & 0.12 & 0.90 & Small & Granular 2,4-D & Navigate & 50 & lbs & 152 & Lbs. per acre \\ 
+  Lulu & 05/04/12 & 2.83 & 2.83 &   1 & 2.83 & 19.1 & Large & Liquid 2,4-D & DMA IV & 47.5 & gallons &  & \\ 
+% % % % round
+  Round & 6/12/12 & 2.79 & 2.43 &   7 & 0.36 & 2.90 & Small & Granular 2,4-D & Navigate & 1408.5 & lbs & 235 & Lbs. per acre \\ 
+  Round & 6/27/13 & 6.35 & 6.35 &  21 & 0.28 & 7.60 & Small & Liquid 2,4-D & DMA IV & 149.2 & gallons & 3 & ppm \\  
+  Round & 6/17/14 & 1.62 & 2.31 &   5 & 0.45 & 2.70 & Small & Granular 2,4-D & Navigate & 183 & lbs & 4 & Lbs. per acre \\ 
+  & & & & & & & & Liquid 2,4-D & DMA IV & 51.3 & gallons & 3 & ppm \\   
+
+\bottomrule
+\\
+
+% % % % sandbar
+  Sandbar & 5/24/11 & 41.40 & 41.40 &   1 & 41.40 & 80.70 & Large & Liquid 2,4-D & DMA IV & 380.74 & gallons & 0.275 & ppm \\ 
+  Sandbar & 6/21/13 & 41.40 & 41.40 &   1 & 41.40 & 80.70 & Large & Liquid 2,4-D & DMA IV & 415.36 & gallons & 0.3 & ppm \\ 
+% % % % seven.island
+  Seven Island & 9/20/05 & 3.24 & 3.24 &   1 & 3.24 & 5.90 & Small & Granular 2,4-D & Navigate & 800 & lbs & 100 & Lbs. per acre \\ 
+% % % % silver
+  Silver & 5/22/07 & 5.26 & 5.26 &   1 & 5.26 & 22.60 & Large & Granular 2,4-D & Navigate & 1300 & lbs & 100 & Lbs. per acre \\ 
+  Silver & 5/15/09 & 1.38 & 1.38 &   1 & 1.38 & 5.90 & Small & Granular 2,4-D & Navigate & 510 & lbs & 150 & Lbs. per acre \\ 
+% % % % tomahawk
+  Tomahawk & 5/20/08 & 54.27 & 46.13 &   3 & 15.38 & 86.90 & Large & Liquid 2,4-D & DMA IV & 489.6 & gallons & 0.5 & ppm \\ 
+  Tomahawk & 9/27/11 & 1.86 & 1.86 &   1 & 1.86 & 3.50 & Small & Diquat & Reward & 7.5 & gallons & 0.37 & ppm \\ 
+  Tomahawk & 7/16/13 & 1.42 & 1.42 &   1 & 1.42 & 2.70 & Small & Liquid 2,4-D & DMA IV & 30 & gallons & 3 & ppm \\ 
+
+% % % % turtle
+  Turtle & \begin{tabular}{ll} 05/09/06 \\ 09/05/06 \end{tabular} & 1.34 & 0.73 &   5 & 0.16 & 1.20 & Small & Liquid 2,4-D & Weeder 64 & 1.75 & gallons &  & \\ 
+  & & & & & & & & Granular 2,4-D & Navigate & 180 & lbs & 133.33 & Lbs. per acre \\ 
+  Turtle & \begin{tabular}{ll} 06/02/08 \\ 10/10/08 \end{tabular} & 3.72 & 3.48 &   7 & 0.49 & 6.10 & Small & Granular 2,4-D & Navigate & 725 & lbs & 120.83 & Lbs. per acre \\ 
+  & & & & & & & & Liquid 2,4-D & Weeder 64 & 13.8 & gallons &  &  \\ 
+  Turtle & 5/18/10 & 4.05 & 4.05 &   7 & 0.57 & 7.10 & Small & Liquid 2,4-D & AM-40 & 86 & gallons & 3 & ppm \\ 
+  Turtle & 5/26/11 & 6.07 & 2.91 &   6 & 0.49 & 5.10 & Small & Liquid 2,4-D & AM-40 & 52.75 & gallons & 3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 3.75 & gallons & 2 & ppm \\ 
+  Turtle & 5/20/13 & 10.12 & 7.12 &   7 & 1.01 & 12.50 & Large & Liquid 2,4-D & AM-40 & 202 & gallons & 2.5 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 22.5 & gallons & 1.5 & ppm \\ 
+  Turtle & 5/28/14 & 12.14 & 4.45 &  21 & 0.20 & 7.80 & Small & Granular 2,4-D & Navigate & 95.5 & lbs & 3 & Lbs. per acre \\  
+  & & & & & & & & Liquid 2,4-D & AM-40 & 204 & gallons & 3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 10 & gallons & 2 & ppm \\  
+  & & & & & & & & Granular Endothall & Aquathol Super K & 14 & lbs & 2 & Lbs. per acre \\ 
+% % % % Underwood
+  Underwood & \begin{tabular}{ll} 05/11/07 \\ 07/16/07 \end{tabular} & 0.81 & 1.21 &   3 & 0.40 & 6.60 & Small & Granular 2,4-D & Navigate & 400 & lbs & 100 & Lbs. per acre \\ 
+  Underwood & 10/1/09 & 0.81 & 0.40 &   4 & 0.12 & 2.20 & Small & Granular 2,4-D & Navigate & 150 & lbs & 150 & Lbs. per acre \\ 
+
+\bottomrule
+\label{tab:managementHistory}
+\end{longtable}
+
+\end{landscape}

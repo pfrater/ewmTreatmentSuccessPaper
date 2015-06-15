@@ -1,0 +1,411 @@
+\documentclass{article}
+\usepackage{geometry} % see geometry.pdf on how to lay out the page. There's lots.
+\geometry{letterpaper}
+\usepackage[pdftex]{graphicx}
+\usepackage[authoryear, colon]{natbib}
+\usepackage{lineno}
+\usepackage{parskip}
+\usepackage{authblk}
+\usepackage{draftwatermark}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{caption}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{epstopdf}
+\usepackage[hidelinks]{hyperref}
+\DeclareGraphicsExtensions{.jpg, .png, .tiff, .pdf}
+\SetWatermarkLightness{0.85}
+\SetWatermarkScale{3}
+
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+
+\title{Impact of Water Quality on Long-term Treatment Success of Eurasian Water Milfoil (\emph{Myriophyllum spicatum} L.) in Wisconsin Lakes}
+
+\author[1,2]{Paul Frater\footnote{Corresponding author: Paul.Frater@wisconsin.gov}}
+\author[1]{Michelle Nault}
+\author[1]{Martha Barton}
+\author[1,3]{Alison Mikulyuk}
+\author[4]{Kelly Wagner}
+\author[5]{Jennifer Hauxwell}
+%\author[2]{}
+\affil[1]{WI Department of Natural Resources Bureau of Science Services, 2801 Progress Rd., Madison, WI 53716}
+\affil[2]{University of Wisconsin-Stout, Biology Department, 331A Jarvis Hall, Menomonie, WI 54751}
+\affil[3]{Center for Limnology, University of Wisconsin-Madison, 680 N. Park St., Madison, WI 53706}
+
+\affil[4]{??? Where's Kelly at now?} % % % % % % % % % % % % % % % % % % % % FIX THIS!!!!!!!!!
+
+\affil[5]{University of Wisconsin Sea Grant Institute, 1975 Willow Dr. 2nd Floor, Madison, WI 53706-1177}
+\renewcommand\Affilfont{\small}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Eurasian water milfoil (EWM) is an invasive aquatic plant that has spread throughout much of North America. It has the potential to disrupt native aquatic plant communities, decrease property values, and impact recreational uses of lakes. As a result much time, effort, and money is put forth every year to combat the spread and increase of this invader. We performed a study that assesses the long-term efficacy of EWM management using herbicide application, which is a common management technique. We derived a formula to determine long-term treatment success for the lakes in this study. Using this metric we found limnological aspects relating to water chemistry that were predictive of treatment success. Specifically, pH, conductivity, oxidation-reduction potential (ORP), and total dissolved solids (TDS) predicted more successful treatments. Lakes with lower pH, conductivity, and TDS exhibited more successful long-term management strategies as did lakes with higher ORP. Additionally, lakes with higher residential densities (defined as the number of buildings per length of shoreline) performed more poorly with regards to EWM management according to our definition of treatment success. Our results reveal important characteristics about lake water chemistry that could be important in determining management strategies for control of EWM in the future. 
+\end{abstract}
+
+\vspace{5mm}
+
+\section*{Introduction}
+\linenumbers
+
+Eurasian water milfoil (\emph{Myriophyllum spicatum}, hereafter referred to as EWM), is an aquatic vascular plant that is exotic to North America \citep{Reed1977}. EWM is a cosmopolitan species that is tolerant to a wide range of environmental conditions, and it has a high rate of spread both among and within lakes \citep{LesMehroff1999, SmithBarko1990, Carpenter1980a}. Although EWM has been associated with altered habitat structure, food web dynamics, and native species abundance, estimates of the magnitude and direction of change are contradictory \citep{OlsonDoherty2014, Kovalenko2010, WilsonRicciardi2009, DuffyBaltz1998, Madsen1991}. The literature pertaining to the economic impact of EWM is scant but unequivocal. \citet{HorschLewis2009} showed that the value of riparian properties decreased by an average of 13\% following invasion of EWM, and EWM invasion has also been estimated at a welfare loss of 23.6 to 30.6K USD per property \citep{Provencher2012}. Where macrophytes are dense, property values decrease more \citep{ZhangBoyle2010}. Economic impacts as a result of EWM are also likely to occur in agriculture, power, and recreational sectors, though formal research has yet to quantify the magnitude of impact \citep{Eiswerth2000}.
+
+Despite sparse and contradictory information on the impacts of EWM, chemical treatment for its management still occurs on many lakes and is often encouraged (via technical consultation and grants) by management agencies and university extension departments \citep{Parkinson2011, WSUecology}. Around \$2 million per year are spent on EWM control in Wisconsin alone (Schaall, \emph{pers. comm.}). EWM is the most widely managed aquatic plant in the United States \citep{Bartodziej1997} yet we lack basic information on the operational and long-term efficacy of field herbicide applications to aquatic systems.
+
+Chemical treatment for EWM control has been assessed in many studies, but most have been in mesocosm \citep{Netherland1993, Netherland1992, Green1990}, or in a single or small number of lakes \citep[1-4,][]{Wersal2010, Poovey2004, Parsons2001, Getsinger1997, Getsinger1992, Lillie1986, Getsinger1982}. Few studies exist that assess chemical treatment of EWM in the field over the long-term ($>2$ years) and across multiple lakes \citep[but see][]{Nault2014, Smithetal2012}. Given the substantial investment of time, resources, and cost associated with chemical control of EWM it would be prudent to know whether herbicides can effectively control EWM populations indelibly. 
+
+Operational aquatic herbicide applications can also produce a range of outcomes that may depend in part on environmental conditions. Herbicide efficacy can be influenced by water quality characteristics such as pH, water hardness, alkalinity, turbidity, and water temperature \citep{Roskamp2013, Chahal2012, Nalewaja1991, Orgell1957}. Most herbicides used for controlling EWM (\emph{e.g.} 2,4-D, fluridone, endothall, triclopyr) are considered weak acids that are sensitive to water chemistry.
+
+We conducted a study to assess effectiveness of chemical treatment on EWM control over time. Our specific questions were: 1.Can chemical treatments effectively control EWM populations over long periods of time (\emph{e.g.} over multiple years), and 2. How do limnological factors relating to water quality affect treatment success? 
+
+\vspace{8mm}
+
+\section*{Methods}
+
+We collected data on EWM abundance in 15 lakes from 2005-2014. Lakes were located in the three lake-rich ecoregions in state of Wisconsin, USA (Fig.~\ref{fig:map}). Lakes were recommended for inclusion in this study by agency managers whose management plans involve strategic application of best management practices. 11 of the 15 lakes had experienced introduction of EWM since the year 2000 while the other 4 had long-standing EWM populations. We were interested in assessing lakes that represented a wide range of EWM abundance, time since invasion, and management strategies to look for patterns between levels of EWM and management regime. Some lakes were chemically treated only once throughout the study while a few were chemically treated every year (sometimes multiple times a year) throughout the study.
+
+We measured EWM abundance estimates using the point-intercept method for sampling aquatic plants in lakes \citep{Hauxwell2010pi}. This protocol consists of systematically sampling a grid of points based on overall area and littoral zone area of the lake \citep{Mikulyuk2010}. All lakes were sampled once during the summer growing period (between June 1 and August 31) of each year with each lake sampled within two weeks of the previous year's sampling date. We recorded presence-absence of EWM at each point. To estimate abundance we calculated percentage of frequency of occurrence (\% FOO) of EWM in the littoral zone by dividing the number of points where EWM was present by the total number of points in the littoral zone (which we defined as 95\% of the maximum depth of colonization of plants).	
+
+We obtained data on water clarity (secchi depth($m$)), dissolved oxygen (mg l$^{-1}$), chlorophyll-\textit{a} ($\mu$g l$^{-1}$), and total phosphorus ($\mu$g l$^{-1}$) from the Wisconsin DNR Citizen Lake Monitoring Network \citep{swims}. In 2011, we collected data on pH, conductivity (mS cm$^{-1}$), total dissolved solids (TDS; g l$^{-1}$), turbidity (NTU), and oxidation-reduction potential (ORP; $mV$) on all lakes (Table~\ref{tab:wqVars}) using a Horiba U-52 Multiparameter meter. We also obtained data on shoreline length (km), surface area (ha), and maximum lake depth (m) from the Wisconsin DNR \citep[Table~\ref{tab:lakeInfo}][]{WDNRLakes}.
+
+We quantified shoreline residential density by counting the number of buildings per km of shoreline on each lake using a combination of aerial photographs and property tax records obtained from county land record GIS portals in January, 2014 (see Table~\ref{tab:countyLandRecords} in Appendix).
+
+Additionally, we constructed lake management histories using  chemical application permits which are legally required in advance of herbicide treatments (Table~\ref{tab:managementHistory}). These permits include when and how frequently treatments occurred as well as the amount and name of the chemical applied.
+
+\subsection*{\small Data Analysis}
+
+We developed a metric to quantify EWM treatment success based on the following parameters: trends in EWM abundance across time; change in EWM abundance associated with herbicide application; and sustained, post-treatment levels of EWM abundances across time. We specified treatment success according to the  following formula: 
+$$S_{M} = -[s \cdot \Delta M - (10 \cdot C)]$$ 
+where $S_{M}$ is a metric for success of chemical management in a lake, $s$ is the slope for the regression of EWM frequency against time within each lake, $\Delta M$ is the maximum decline in EWM frequency (as a positive value) associated with a treatment, and $C$ is the consistency of a lake to maintain post-treatment levels of EWM abundance (\emph{i.e.} the number of years that EWM did not rise more than 5 percentage points in frequency of occurrence above post-treatment levels). $s$ was calculated by taking the regression slope from the linear model of EWM \%FOO against time and defines the trend in EWM abundance across time of study. $\Delta M$ was calculated by taking the difference between the pre-treatment EWM \%FOO and post-treatment EWM \%FOO for each treatment and taking the largest decrease in EWM \%FOO associated with a treatment for each lake. $\Delta M$ is essentially a reward for lakes that show large, rapid declines in EWM abundance associated with chemical treatment. $C$ simply assigns a value of 1 for each year that the post-treatment EWM \%FOO did not rise more than 5\% above its lowest post-treatment level and is essentially a bonus for lakes that are able to maintain low levels of EWM post-treatment. We added a negative symbol to switch the sign of the outcome for ease of interpretation as the parameters inside brackets result in more negative values for more successful treatments. We saw the value $\Delta M$ as important for defining effective initial treatment and the value of $C$ as an important component for the quantitative definition of successful long-term management of EWM. This formula was applied to each lake to derive a metric for how successfully a lake responds to chemical treatment with respect to levels of EWM and if this response seems to hold over longer periods of time. We used this metric as a response variable to analyze against various limnological variables (\emph{e.g.} pH, turbidity, TDS, conductivity, clarity). All analyses and metric calculations were performed in the R 3.0.3 environment for statistical computing \citep{R}. 
+
+We performed regressions of the treatment success metric described above against various water chemistry variables (\emph{e.g.} pH, turbidity, TDS, conductivity, clarity, residential density, and number of times chemically treated, DO, total P, and chlorophyll-\emph{a}). When patterns appeared nonlinear we used differences in corrected AIC ($\Delta\mathrm{AIC_{c}}$) values to compare nonlinear to linear models 
+with a $\Delta\mathrm{AIC_{c}}$ of $>2$ indicating the nonlinear model as a better fit compared to simple linear regression. In these instances we used nonlinear least squares (\verb|nls()| in R) with the regression formula $Y=\frac{k}{x}$ to fit regression lines.
+
+In addition to the above treatment success metric we also performed time series cluster analysis on patterns of EWM abundance in the different lakes. 
+Management decisions on different lakes are made independently, so we used dynamic time warping (DTW) to account for temporal asynchrony in treatment timing and EWM response. DTW uses an algorithm to minimize the distance between patterns that are similar but temporally disjunct \citep{Berndt1994}. DTW is useful for finding patterns that are analogous, but might occur at different times \citep{Liao2005}. This method is useful in our analysis since herbicide applications are performed in different years, but are intended to produce similar results. We created a DTW distance matrix of lakes using package \verb!dtw! in R \citep{Giorgino2009}. The distance calculations in this package have no way to handle missing values, so we imputed missing values with the \verb!impute! package in R using 5 as the $k$-nearest neighbors \citep{Rimpute} as this seemed to provide the most accurate reflection of EWM trends in lakes with missing data. We then put the distance matrix to a complete agglomerative hierarchical clustering using R's \verb!hclust()! function, and cut the derived dendrogram at four clusters. To correlate these clusters with environmental variables we performed a Principal Coordinates Analysis (PCoA) on the DTW distance matrix and overlaid environmental variables to look for correlations with successful groups of treated lakes.
+
+\vspace{8mm}
+
+\section*{Results}
+
+We found a significant correlation between $S_{M}$ and pH (Fig.~\ref{fig:trtSuccessPanels}a, $p < 0.01, R^2 = 0.37$) where more successful treatments were correlated with low pH. We also discovered nonlinear trend patterns in $S_{M}$ with conductivity (Fig.~\ref{fig:trtSuccessPanels}b) and TDS (Fig.~\ref{fig:trtSuccessPanels}d). In these cases the $\Delta\mathrm{AIC_{c}}$ value was at least 2 points less than the linear counterpart (conductivity $\Delta\mathrm{AIC_{c}} = 5.28$; TDS $\Delta\mathrm{AIC_{c}} = 5.39$). We also found a significant negative linear correlation between $S_{M}$ and ORP (Fig.~\ref{fig:trtSuccessPanels}, $p < 0.001, R^2 = 0.62$) indicating that lakes with a higher ORP exhibited greater treatment success. 
+
+Clustering the EWM abundance time series produced four groups of lakes with treatments that display different long-term patterns. One cluster included lakes that demonstrated large, rapid decreases that were sustained over time. Another group of lakes displayed similar decreases that occurred more slowly. The third and fourth clusters included lakes that maintained low levels of EWM over the study period, and one lake with chaotic dynamics. We call these clusters, respectively, ``highly successful”,``moderate decrease”, ``low level”, and ``unsuccessful” (Fig.~\ref{fig:distClusters}). To determine whether environmental factors were associated with cluster membership we performed a principal coordinates analysis (PCoA) in order to visualize group distance in relation to each other (Fig.~\ref{fig:pcoaPlot}). Lakes in the PCoA ordination are color-coded to their respective group from the cluster analysis. ``Highly successful" lakes are located towards the bottom of this space, ``moderate decreasers" in the middle, ``low level" lakes towards the left in green, and the ``unsuccessful" lake located in the far upper right. The ordination describes a gradient in the treatment success metric along the second axis. We overlaid environmental vectors onto this ordination which were statistically significant at $p\leq0.05$ based on permutation tests done with the \verb!envfit! function in the R package \verb!vegan!. TDS and conductivity are both negatively correlated with the ``highly successful" lakes as well as the overall success gradient captured on the second axis, while ORP is highly positively correlated with the ``highly successful" lakes. Additionally, residential density is negatively correlated with lakes with ``highly successful" treatments meaning that lakes with higher residential densities exhibited lower success with respect to treatment. Surface area was significant but uncorrelated with the overall success gradient. This result could be somewhat spurious as the sole lake in the ``unsuccessful cluster" (Little Green Lake, Green Lake County, WI) is also the largest, so it may carry disproportionate weight on that variable. 
+
+
+\vspace{8mm}
+
+\section*{Discussion}
+
+Our results provide plausible supporting evidence for the claim that herbicide treatments are more effective and more potent in lakes with lower pH, conductivity, and TDS as well as those with a higher ORP. Applicators using herbicides in agricultural practice are highly encouraged to use ``clean'' water for mixing and spraying chemical pesticides as herbicide efficacy can be influenced by water quality characteristics such as pH, cations, water hardness, alkalinity, turbidity, and water temperature \citep{Roskamp2013, Chahal2012, Nalewaja1991, Orgell1957}.  These herbicides are often weak acids that can dissociate when dissolved in alkaline water. It is difficult for dissociated herbicide molecules to penetrate the leaf cuticle of a plant which renders the herbicide less effective at killing unwanted plants	 \citep{Baur1974}.  Additionally, high levels of cations in water can decrease the performance of herbicides by binding to negatively charged herbicide ions in the active ingredients of chemicals \citep{Roskamp2013}. Similarly, dissolved sediments (\emph{i.e.} turbidity and total dissolved solids) in water can bind to herbicide molecules rendering them ineffective. Most herbicides used for controlling EWM (\emph{e.g.} 2,4-D, fluridone, endothall, triclopyr) are considered weak acids. Using this knowledge from agricultural applications we hypothesized that these variables, which are commonly measured in limnology, would have the same effect on herbicides used for EWM control.
+
+Both trends for conductivity and TDS matched our hypotheses for these variables as we predicted less successful treatments for lakes that had a higher conductivity and TDS. Conductivity is a general measure of ions found in water that conduct electricity, and these ions (especially cations) can bind with herbicide molecules rendering them less absorbent into plant tissue \citep{Chahal2012}. TDS is a measure of particles in the water \citep[mostly cations -- $\mathrm{Ca}^{2+}$, $\mathrm{Mg}^{2+}$, $\mathrm{Zi}^{++}$, and $\mathrm{Na}^{+}$][]{Hem1985}, which can also bind to herbicide molecules and have the same effect as conductivity. Negatively charged herbicide ions can attract positively charged ions in water which then form larger molecules that do not readily absorb into plant tissues \citep{Chahal2012}. The effects of conductivity and TDS are likely related. Conductivity and TDS are often correlated \citep{Hem1985}, and were highly correlated in our data (Fig.~\ref{fig:pcoaPlot}); hence it is no surprise that these two variables show similar results with respect to treatment success. 
+
+Chemical treatments were also more successful in lakes with a lower pH in our study. pH is known to chemically dissociate weak acid herbicides when dissolved in water with a pH $> 7$ \citep{Chahal2012, Baur1974}. Weak acid herbicides (such as 2,4-D, fluridone, endothall, triclopyr, glyphosate, and dicamba) remain neutral when dissolved in waters with a pH $< 7$; however, when dissolved into water with pH $> 7$ the herbicide becomes negatively charged making it difficult for herbicide molecules to penetrate the leaf cuticles and plant cells \citep{Baur1974, Crafts1953}. 
+
+The positive correlation between $S_{M}$ and ORP as well as the correlation between ORP and ``highly successful" lakes in our PCoA both indicate that higher ORP was predictive of a more successful treatment. ORP is a measure generally indicative to the overall health of a lake as the bacteria in higher ORP lakes are able to more efficiently break down dead tissue and contaminants. Our data on pH and ORP were significantly correlated so it is difficult to tease apart the effects of ORP on herbicide effectiveness. However, pH was not a significant environmental variable when fitted to the ordination, which perhaps lends greater importance to ORP in predicting treatment success. While pH has been shown to impact the efficacy of weak acid herbicides there have been no studies assessing the impact of ORP on herbicides.
+
+In addition to the impact of water quality on the success of herbicide treatment for EWM control we discovered a nonlinear trend for residential density on the success of treatment. This regression indicated that lakes with greater residential density did not produce EWM declines from herbicide application that were as pronounced and/or sustained. Increased residential density could potentially be correlated with increased human recreational use on a lake which could potentially lead either to increased introductions of EWM or increased fragmenting of EWM which aids in spread of the plant \citep{SmithBarko1990}. If a particular lake had a successful treatment in one year, but EWM was introduced post-treatment, this could result in re-establishment of EWM populations. It is plausible that increased human development on a particular lake could lead to increased nutrient input and eutrophication of a lake; however, we did not find a correlation between nutrient concentrations and treatment success in our study.
+
+Our results show that long-term EWM control efforts can be attainable and effective; however, some lakes may have inherent limnological characteristics that could affect herbicide performance. Lakes that exhibited lower levels of treatment success in this study tended to be higher in pH, TDS, and conductivity and lower in ORP. These variables could act as a guideline for determining if a lake is a good candidate for herbicide application as a management technique or perhaps even adjusting application rates of herbicide. However, more research, especially modeling, needs to be done before that level of diagnosis can be achieved. 
+
+\section*{Conclusion}
+We presented evidence for water chemistry controls on EWM herbicide treatment success. In particular, pH, conductivity, and TDS should be measured prior to chemical treatment, as these factors may limit treatment success. It is known among lake managers that pH can decrease herbicide efficacy on invasive control, and this study presents evidence which supports that. Additionally, these findings reveal that conductivity, TDS, and ORP that may also play an important role in determining the ultimate success of herbicide treatments. Future research on this topic should assess the relative importance of these variables with respect to reducing herbicide efficacy. These components of water quality could serve as important diagnostic metrics for making aquatic invasive management decisions such as rate of herbicide application or even whether a lake should be managed with herbicide application at all.
+
+\nolinenumbers
+
+% figure template
+\newpage
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/ewmLakesWI.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Map of lakes used in this study. EWM abundance samples were taken from these 15 lakes within 11 counties in Wisconsin, USA. Interior lines and labels represent Level III ecoregions as determined by \citet{Omernik1987}. Lakes were sampled for at least 7 years (between 2005-2014) to determine long-term trends of EWM over time.}
+	\label{fig:map}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/trtSuccessFourPaneledFig.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Scatterplots of treatment success ($S_{M}$) against pH (A), conductivity (B), ORP (C), and TDS (D). $S_{M}$ was correlated with all variables plotted here -- pH ($p < 0.01, R^2 = 0.37$), conductivity ($p < 0.05, \Delta\mathrm{AIC_{c}} = 5.2, S = 82.61, d.f = 14$), ORP ($p<0.001, R^{2}=0.62$), and TDS ($p<0.05, \Delta\mathrm{AIC_{c}}=5.6, S = 81.11, d.f. = 14$). The nonlinear decay equation used as regression formula for conductivity and ORP is shown as well as the root mean square error (S).}
+	\label{fig:trtSuccessPanels}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/dtwDistClusters2.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Trends in EWM frequency of occurrence (\%FOO EWM) across the timeline of the study. Each line represents a lake's EWM abundance across time, and lakes were clustered using complete linkage cluster analysis based on dynamic time warping (DTW) distance and four clusters. Groups are defined as lakes where treatments: 1) were highly successful, 2) maintained a low level of EWM, 3) exhibited a moderate decrease, or 4) were unsuccessful.}
+	\label{fig:distClusters}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{figures/pcoaPlot.pdf}
+	\captionsetup{justification=raggedright}
+	\caption{Principle Coordinates Analysis (PCoA) of dynamic time warping (DTW) distance of EWM abundance in lakes with overlay of environmental variables. Points are colored according to groups in complete linkage clustering (Fig.~\ref{fig:distClusters}). Blue points are the ``highly successful" treatment lakes, green are ``moderate decreasers", gray are ``low level" of EWM, and red is ``unsuccessful". Environmental parameters are fit are onto the ordination \emph{post hoc}. Only significant environmental parameters ($p\leq0.05$) based on permutation tests are included. A general gradient of the treatment success metric exists from bottom to top of the ordination plot with more successful treatments towards the bottom. Conductivity (Cond), total dissolved solids (TDS), and residential density (ResDens) are all negatively correlated with the highly successful treatments while ORP is positively correlated. Surface area (SA) is relatively uncorrelated with the treatment success gradient, but perhaps could be a spurious result as the one unsuccessful lake also had the greatest surface area.}
+	\label{fig:pcoaPlot}
+\end{figure}
+
+\begin{landscape}
+\begin{table}[t]
+\centering
+\captionsetup{justification=raggedright}
+\caption{Locations and physical characteristics of lakes included in the study. WBIC refers to water body identification code and residential density is the number of buildings adjacent to the lake per km of shoreline.}
+\label{tab:lakeInfo}
+\begin{tabular}{@{}lllllp{19mm}p{25mm}p{25mm}l@{}}
+\toprule
+Lake & County & WBIC & Latitude & Longitude & \begin{tabular}{@{}ll@{}} Surface Area \\ (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} Shoreline Length \\ (km) \end{tabular} & \begin{tabular}{@{}ll@{}} Max Lake Depth \\ (m) \end{tabular} & \begin{tabular}{@{}ll@{}} Res. Density \\ (buildings km$^{-1}$) \end{tabular} \\ 
+\midrule
+Arrowhead & Vilas & 1541500 & 45.91 & -89.69 & 38.85 & 3.22 & 13.11 & 76.43 \\ 
+  Berry & Oconto & 418300 & 44.89 & -88.48 & 84.58 & 5.31 & 8.23 & 47.29 \\ 
+  Connors & Sawyer & 2275100 & 45.75 & -90.74 & 165.92 & 7.56 & 24.99 & 26.70 \\ 
+  Kathan & Oneida & 1598300 & 45.87 & -89.32 & 86.60 & 5.79 & 4.57 & 15.20 \\ 
+  Kettle Moraine & Fond Du Lac & 43900 & 43.65 & -88.21 & 84.58 & 4.83 & 9.14 & 40.76 \\ 
+  Little Green & Green Lake & 162500 & 43.74 & -88.98 & 186.96 & 6.76 & 8.53 & 57.46 \\ 
+  Loon & Shawano & 323800 & 44.83 & -88.51 & 132.33 & 4.35 & 6.71 & 47.08 \\ 
+  Lulu & Shawano & 324000 & 44.84 & -88.50 & 14.97 & 1.61 & 3.96 & 35.40 \\ 
+  Round & Burnett & 2640100 & 45.66 & -92.58 & 84.17 & 5.15 & 8.23 & 38.21 \\ 
+  Sandbar & Bayfield & 2494900 & 46.37 & -91.53 & 51.40 & 3.22 & 14.94 & 29.77 \\ 
+  Seven Island & Lincoln & 1490300 & 45.42 & -89.47 & 54.63 & 5.47 & 9.45 & 30.76 \\ 
+  Silver & Vilas & 1599800 & 45.92 & -89.24 & 23.07 & 2.25 & 5.79 & 29.88 \\ 
+  Tomahawk & Bayfield & 2501700 & 46.36 & -91.52 & 53.01 & 4.67 & 12.80 & 14.43 \\ 
+  Turtle & Walworth & 795100 & 42.73 & -88.68 & 57.06 & 3.70 & 9.14 & 37.08 \\ 
+  Underwood & Oconto & 519700 & 45.04 & -88.24 & 18.21 & 2.09 & 11.28 & 39.61 \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+\begin{table}
+\centering
+\captionsetup{justification=raggedright}
+\caption{Limnological and benthic substrate of lakes in included in this study. Cond stands for conductivity in mS cm$^{-1}$ adjusted for temperature to $25$\textdegree. DO stands for dissolved oxygen and TDS for total dissolved solids.}
+\label{tab:wqVars}
+\begin{tabular}{@{}llllp{14mm}p{12mm}p{13mm}lp{15mm}p{15mm}ll@{}}
+\toprule
+Lake & Secchi (m) & \% Sand & \% Rock & \% Muck & \begin{tabular}{ll} Chl-\emph{a} \\ ($\mu$ L$^{-1}$) \end{tabular} & \begin{tabular}{@{}ll@{}} Total P \\ ($\mu$ L$^{-1}$) \end{tabular} & pH & \begin{tabular}{@{}ll@{}} Cond. \\ (mS cm$^{-1}$) \end{tabular} & \begin{tabular}{@{}ll@{}} Turbidity \\ (NTU) \end{tabular} & \begin{tabular}{@{}ll@{}} DO \\ (mg L$^{-1}$) \end{tabular} & \begin{tabular}{@{}ll@{}} TDS \\ (g L$^{-1}$) \end{tabular} \\ 
+\midrule
+Arrowhead & 4.15 & 0.65 & 0.02 & 0.33 & -- & -- & 8.51 & 0.10 & 3.60 & 6.84 & 0.06 \\ 
+  Berry & 3.56 & 0.28 & 0.00 & 0.72 & 2.97 & 12.67 & 8.77 & 0.14 & 0.00 & 7.87 & 0.10 \\ 
+  Connors & 3.68 & 0.47 & 0.16 & 0.37 & 4.24 & 17.65 & 7.89 & 0.09 & 0.10 & 7.06 & 0.06 \\ 
+  Kathan & 1.22 & 0.16 & 0.02 & 0.82 & 7.91 & 27.31 & 6.59 & 0.09 & 15.30 & 6.16 & 0.05 \\ 
+  Kettle Moraine & 3.01 & 0.02 & 0.04 & 0.94 & -- & -- & 8.80 & 0.26 & 2.50 & 9.87 & 0.16 \\ 
+  Little Green & 1.68 & 0.08 & 0.04 & 0.87 & -- & -- & 8.51 & 0.40 & 7.50 & 7.78 & 0.24 \\ 
+  Loon & 1.71 & 0.28 & 0.00 & 0.72 & 8.17 & 31.13 & 7.12 & 0.13 & 6.90 & 7.34 & 0.09 \\ 
+  Lulu & 2.91 & 0.02 & 0.00 & 0.98 & -- & -- & 7.97 & 0.19 & 1.00 & 5.94 & 0.13 \\ 
+  Round & 1.45 & 0.38 & 0.14 & 0.48 & -- & -- & 8.89 & 0.18 & 14.60 & 10.24 & 0.13 \\ 
+  Sandbar & 5.29 & 0.62 & 0.02 & 0.36 & 1.93 & 10.14 & 7.55 & 0.06 & 0.20 & 6.63 & 0.04 \\ 
+  Seven Island & 3.90 & 0.20 & 0.09 & 0.71 & 3.32 & 10.85 & 7.40 & 0.04 & 1.70 & 8.23 & 0.02 \\ 
+  Silver & 2.96 & 0.14 & 0.00 & 0.86 & -- & -- & 8.03 & 0.19 & 0.50 & 6.38 & 0.13 \\ 
+  Tomahawk & 4.20 & 0.28 & 0.01 & 0.71 & 3.61 & 12.86 & 8.72 & 0.06 & 0.00 & 7.37 & 0.04 \\ 
+  Turtle & 2.88 & 0.14 & 0.01 & 0.86 & 6.85 & 21.40 & 8.47 & 0.52 & 4.50 & 8.89 & 0.32 \\ 
+  Underwood & 5.64 & 0.18 & 0.00 & 0.82 & -- & -- & 8.10 & 0.11 & 0.00 & 9.81 & 0.07 \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+
+\begin{landscape}
+%\centering
+\begin{longtable}[l]{lp{14mm}Hp{10mm}HHp{14mm}p{9mm}p{30mm}p{18mm}lp{14mm}p{8mm}l}
+\captionsetup{justification=raggedright} \\
+\caption{Management histories for lakes included in study throughout the sampling period. Scale refers to large or small scale treatments. Herbicide refers to the type of herbicide used whereas product refers to the specific name-brand of herbicide.} \\
+\toprule
+Lake & \begin{tabular}{@{}ll@{}} Date \\ Treated \end{tabular} & \begin{tabular}{@{}ll@{}} Permit \\ Area \\ (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} Area \\ Treated \\ (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} \# \\ Trt. \\ Areas \end{tabular} & \begin{tabular}{@{}ll@{}} Avg. Trt. \\ Size (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} \% Surf. \\ Area \\ Treated \end{tabular} & Scale & Herbicide & Product & Amount & \begin{tabular}{@{}ll@{}l} Amount \\ Units \end{tabular} & Conc. & \begin{tabular}{@{}ll@{}} Conc. \\ Units \end{tabular} \\
+\midrule
+\endfirsthead
+\multicolumn{11}{l}{\parbox{\LTcapwidth}{Table~\ref{tab:managementHistory} (cont'd.)}} \\
+\toprule
+Lake & \begin{tabular}{@{}ll@{}} Date \\ Treated \end{tabular} & \begin{tabular}{@{}ll@{}} Permit \\ Area \\ (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} Area \\ Treated \\ (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} \# \\ Trt. \\ Areas \end{tabular} & \begin{tabular}{@{}ll@{}} Avg. Trt. \\ Size (ha) \end{tabular} & \begin{tabular}{@{}ll@{}} \% Surf. \\ Area \\ Treated \end{tabular} & Scale & Herbicide & Product & Amount & \begin{tabular}{@{}ll@{}l} Amount \\ Units \end{tabular} & Conc. & \begin{tabular}{@{}ll@{}} Conc. \\ Units \end{tabular} \\
+\midrule
+\endhead
+% % % % arrowhead
+  Arrowhead & 5/15/09 & 1.25 & 1.25 & 3 & 0.40 & 3.20 & Small & Granular 2,4-D & Navigate & 435 & lbs & 140 & Lbs. per acre \\ 
+  Arrowhead & 6/1/10 & 1.62 & 1.13 &   2 & 0.57 & 2.90 & Small & Granular 2,4-D & Navigate & 475 & lbs & 170 & Lbs. per acre \\ 
+  Arrowhead & 6/3/11 & 0.65 & 0.65 &   3 & 0.20 & 1.70 & Small & Granular 2,4-D & Navigate & 308 & lbs & 193 & Lbs. per acre \\
+% % % % berry
+  Berry & 10/25/07 &  & 1.54 &   6 & 0.24 & 1.80 & Small & Granular 2,4-D & Navigate & 500 & lbs & 133 & Lbs. per acre \\ 
+  Berry & 6/16/08 & 1.21 & 0.53 &   4 & 0.12 & 0.60 & Small & Granular 2,4-D & Navigate & 200 & lbs & 152 & Lbs. per acre \\ 
+  Berry & 10/14/10 & 0.73 & 0.73 &   1 & 0.73 & 0.90 & Small & Granular 2,4-D & Navigate & 375 & lbs & 208 & Lbs. per acre \\ 
+  Berry & 6/9/11 & 8.09 & 0.77 &   2 & 0.40 & 0.90 & Small & Granular 2,4-D & Navigate & 250 & lbs & 132 & Lbs. per acre \\ 
+  Berry & 5/10/12 & 3.60 & 3.60 &   1 & 3.60 & 4.30 & Small & Liquid 2,4-D & DMA IV & 142.5 & gallons & 3 & ppm \\   
+% % % % berry
+  Connors & 06/13/05 & 16.19 & 12.99 &   7 & 1.86 & 7.80 & Small & Granular 2,4-D & Navigate & 2800 & lbs & 87 & Lbs. per acre \\ 
+  Connors & 7/24/06 & 2.43 & 2.43 &   1 & 2.43 & 1.50 & Small & Granular 2,4-D & Navigate & 900 & lbs & 150 & Lbs. per acre \\ 
+  Connors & 6/4/07 & 3.97 & 3.97 &   5 & 0.81 & 2.40 & Small & Granular 2,4-D & Navigate & 1470 & lbs & 150 & Lbs. per acre \\ 
+  Connors & 5/29/09 & 10.12 & 8.26 &   6 & 1.38 & 5.00 & Small & Granular 2,4-D & Navigate & 3570 & lbs & 175 & Lbs. per acre \\ 
+  Connors & 6/1/10 & 7.69 & 6.72 &   8 & 0.85 & 4.00 & Small & Granular 2,4-D & Navigate & 2905 & lbs & 175 & Lbs. per acre \\ 
+  Connors & 6/28/11 & 1.21 & 0.20 &   3 & 0.08 & 0.10 & Small & Granular 2,4-D & Navigate & 85 & lbs & 170 & Lbs. per acre \\ 
+  Connors & 05/23/12 & 2.02 & 1.62 &   9 & 0.16 & 1.00 & Small & Granular 2,4-D & Navigate & 1232.1 & lbs & 310 & Lbs. per acre \\ 
+  Connors & 7/24/13 & 1.62 & 0.04 &  11 & 0.00 & 0.00 & Small & Granular 2,4-D & Navigate & 54 & lbs & 386 & Lbs. per acre \\ 
+  Connors & 07/09/14 & 1.21 & 0.73 &   6 & 0.12 & 0.40 & Small & Granular 2,4-D & Sculpin G & 762.6 & lbs & 422 & Lbs. per acre \\   
+% % % % Kathan
+  Kathan & 05/13/10 & 46.54 & 46.54 &   1 & 46.54 & 53.70 & Large & Liquid 2,4-D & DMA IV & 194.5 & gallons & 0.5 & ppm \\ 
+% % % % Kettle moraine
+  Kettle Moraine & 04/18/05 &  & 8.09 &  1 & 8.09 & 9.6 & Small & Liquid Endothall & Aquathol K & 80 & gallons & -- & -- \\ 
+  Kettle Moraine & 05/02/06 & 57.06 & 57.06 &   2 & 28.53 & 67.50 & Large & Granular 2,4-D & Navigate & 14100 & lbs & 100 & Lbs. per acre \\ 
+  Kettle Moraine & 05/08/07 & 56.66 & 53.54 &   7 & 7.65 & 63.30 & Large & Granular 2,4-D & Navigate & 11700 & lbs & 100 & Lbs. per acre \\ 
+  Kettle Moraine & 05/08/07 & 56.66 & 53.54 &   7 & 7.65 & 63.30 & Large & Liquid 2,4-D & DMA IV & 27.5 & gallons &   -- &  -- \\ 
+  & & & & & & &  & Liquid Endothall & Aquathol K & 55 & gallons & -- & -- \\ 
+  Kettle Moraine & 5/8/08 & 55.44 & 16.19 &   1 & 16.19 & 19.10 & Large & Liquid 2,4-D & DMA IV & 70 & gallons & 0.5 & ppm \\ 
+  & & & & & & &  & Liquid Endothall & Aquathol K & 135 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 5/11/09 & 55.44 & 52.61 &   6 & 8.78 & 62.20 & Large & Liquid 2,4-D & DMA IV & 100 & gallons & 0.1 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 360 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 4/26/10 & 36.83 & 36.83 &   9 & 4.09 & 43.50 & Large & Liquid 2,4-D & DMA IV & 240 & gallons & 0.25 & ppm \\
+  
+  \bottomrule
+   
+  & & & & & & & & Liquid Endothall & Aquathol K & 305 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 5/10/11 & 24.69 & 24.69 &  10 & 2.47 & 29.20 & Large & Liquid 2,4-D & DMA IV & 245 & gallons & 0.25 & ppm \\
+  Kettle Moraine & 5/10/11 & 24.69 & 24.69 &  10 & 2.47 & 29.20 & Large & Liquid Endothall & Aquathol K & 205 & gallons & 1 & ppm \\ 
+  Kettle Moraine & 04/20/12 & 15.05 & 39.38 &  16 & 2.47 & 46.60 & Large & Liquid 2,4-D & DMA IV & 295 & gallons & 0.3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 302.5 & gallons & 2 & ppm \\  
+  Kettle Moraine & 5/15/13 & 33.10 & 33.10 &   2 & 16.55 & 39.10 & Large & Liquid 2,4-D & DMA IV & 290 & gallons & 0.3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 380 & gallons & 1.6 & ppm \\   
+  Kettle Moraine & 5/22/14 & 35.33 & 35.33 &   2 & 17.68 & 41.80 & Large & Liquid 2,4-D & DMA IV & 290 & gallons & 0.26 & ppm \\ 
+  Kettle Moraine & 5/22/14 & 35.33 & 35.33 &   2 & 17.68 & 41.80 & Large & Liquid Endothall & Aquathol K & 751 & gallons & 2.45 & ppm \\ 
+% % % % Little Green
+  Little Green & \begin{tabular}{@{}ll@{}} 05/16/05 \\ 08/15/05 \end{tabular} &  & 19.83 &   9 & 2.19 & 10.60 & Large & Granular 2,4-D & Navigate & 600 & lbs & 100 & Lbs. per acre \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 195 & gallons &  -- &  -- \\
+  Little Green & 05/09/06 & 33.91 & 33.91 &  10 & 3.40 & 18.10 & Large & Liquid 2,4-D & Weeder 64 & 3 & gallons &  -- &  -- \\ 
+  & & & & & & & & Granular 2,4-D & Navigate & 10250 & lbs & 125 & Lbs. per acre \\ 
+  Little Green & 05/21/07 & 40.46 & 43.98 & 9 & 4.90 & 23.5 & Large & Liquid 2,4-D & Weeder 64 & 152 & gallons &  -- &  -- \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 260.9 & gallons &  & \\ 
+  Little Green & 06/09/08 & 36.42 & 36.42 & 2 & 18.21 & 19.5 & Large & Liquid 2,4-D & Weeder 64 & 20 & gallons &  -- &  -- \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 270 & gallons &  & \\   
+  Little Green & 05/15/09 & 21.04 & 20.96 & 8 & 2.63 & 11.2 & Large & Liquid 2,4-D & DMA IV & 125 & gallons &  -- & -- \\   
+  & & & & & & & & Liquid Endothall & Aquathol K & 155 & gallons &  & \\        
+  Little Green & 05/10/10 & 21.04 & 19.14 & 10 & 1.90 & 10.2 & Large & Liquid 2,4-D & DMA IV & 145.5 & gallons &  -- & -- \\
+  & & & & & & & & Liquid Endothall & Aquathol K & 69 & gallons &  & \\  
+  Little Green & 05/18/11 & 21.45 & 21.45 & 6 & 3.56 & 11.5 & Large & Liquid 2,4-D & \begin{tabular}{@{}ll@{}} DMA IV \& \\ Weedar 64 \end{tabular} & 130 & gallons & -- & -- \\  
+  & & & & & & & & Liquid Endothall & Aquathol K & 106.8 & gallons &  & \\
+  Little Green & 4/24/12 & 34.40 & 31.48 &   7 & 4.49 & 16.80 & Large & Liquid 2,4-D & DMA IV & 172 & gallons & 1 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 148 & gallons & 1 & ppm \\ 
+  Little Green & 6/28/13 & 7.28 & 4.05 &   5 & 0.81 & 2.20 & Small & Liquid 2,4-D & DMA IV & 42 & gallons & 2 & ppm \\ 
+  & & & & & & & & Diquat & Harvester & 4 & gallons & 1 & gal acre$^{-1}$ \\ 
+  
+   \bottomrule
+   \\  
+   
+  Little Green & \begin{tabular}{@{}ll@{}} 05/13/14 \\ 06/25/14 \end{tabular} & 10.97 & 7.28 &   5 & 1.46 & 3.90 & Small & Liquid 2,4-D & DMA IV & 73 & gallons & 2 & ppm \\
+  Little Green & \begin{tabular}{@{}ll@{}} 05/13/14 \\ 06/25/14 \end{tabular} & 10.97 & 7.28 &   5 & 1.46 & 3.90 & Small & Liquid Endothall & Aquathol K & 50 & gallons & 1.5 & ppm \\  
+  & & & & & & & & Diquat & Harvester & 7 & gallons & 1.25 & gal acre$^{-1}$ \\ 
+% % % % Loon
+  Loon & 5/31/05 & 11.25 & 16.19 &  11 & 1.46 & 12.20 & Large & Granular 2,4-D & Navigate & 3400 & lbs & 935 & Lbs. per acre \\  
+  Loon & 5/15/06 & 21.04 & 25.01 &  &  & 18.90 & Large & Liquid 2,4-D & Weeder 64 & 77.5 & gallons & 0.5 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 155 & gallons & 1 & ppm \\ 
+  Loon & 05/02/07 & 35.61 & 35.61 & 8 & 4.45 & 26.90 & Large & Liquid 2,4-D & DMA IV & 180 & gallons &  -- &  -- \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 370 & gallons &  -- &  -- \\ 
+  Loon & 5/12/08 & 27.68 & 27.68 &   6 & 4.61 & 20.90 & Large & Liquid 2,4-D & DMA IV & 222.5 & gallons & 0.75 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 448 & gallons & 1.5 & ppm \\ 
+  Loon & 5/4/09 & 28.33 & 27.68 &   6 & 4.61 & 20.90 & Large & Granular 2,4-D & Navigate & 1450 & lbs & 81 & Lbs. per acre \\ 
+  & & & & & & & & Liquid 2,4-D & DMA IV & 139 & gallons & 0.5 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 278 & gallons & 1 & ppm \\ 
+  & & & & & & & & Granular Endothall & \begin{tabular}{@{}ll@{}} Aquathol \\ Super K \end{tabular} & 550 & lbs & 31 & Lbs. per acre \\ 
+  Loon & 4/15/10 & 27.52 & 27.52 &   6 & 4.57 & 20.80 & Large & Liquid 2,4-D & DMA IV & 392.4 & gallons & 1.05 & ppm \\
+  Loon & 4/15/10 & 27.52 & 27.52 &   6 & 4.57 & 20.80 & Large & Liquid Endothall & Aquathol K & 374.1 & gallons & 1 & ppm \\ 
+  Loon & 4/17/12 & 35.45 & 35.45 &   7 & 5.06 & 26.80 & Large & Liquid 2,4-D & DMA IV & 645.6 & gallons & 1.89 & ppm \\ 
+  Loon & 5/15/13 & 35.45 & 35.45 &   7 & 5.06 & 26.80 & Large & Liquid 2,4-D & DMA IV & 550 & gallons & 1.14 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 695 & gallons & 1.44 & ppm \\ 
+% % % % Lulu
+  Lulu & 06/17/05 & 0.81 & 0.32 &   1 & 0.32 & 2.0 & Small & Granular 2,4-D & Navigate & 88 & lbs &  -- &  -- \\ 
+  Lulu & 05/30/06 & 0.81 & 0.32 &   1 & 0.32 & 2.1 & Small & Granular 2,4-D & Navigate & 78 & lbs &  -- & --  \\ 
+  Lulu & 5/18/07 & 0.81 & 0.08 &   1 & 0.08 & 0.40 & Small & Granular 2,4-D & Navigate & 15 & lbs & 100 & Lbs. per acre \\ 
+  Lulu & 5/19/08 & 0.81 & 0.08 &   1 & 0.08 & 0.50 & Small & Granular 2,4-D & Navigate & 28 & lbs & 147 & Lbs. per acre \\ 
+  Lulu & 5/28/09 & 0.81 & 0.12 &   1 & 0.12 & 0.90 & Small & Granular 2,4-D & Navigate & 50 & lbs & 152 & Lbs. per acre \\ 
+  Lulu & 05/04/12 & 2.83 & 2.83 &   1 & 2.83 & 19.1 & Large & Liquid 2,4-D & DMA IV & 47.5 & gallons &  -- & -- \\ 
+% % % % round
+  Round & 6/12/12 & 2.79 & 2.43 &   7 & 0.36 & 2.90 & Small & Granular 2,4-D & Navigate & 1408.5 & lbs & 235 & Lbs. per acre \\ 
+  Round & 6/27/13 & 6.35 & 6.35 &  21 & 0.28 & 7.60 & Small & Liquid 2,4-D & DMA IV & 149.2 & gallons & 3 & ppm \\  
+
+\bottomrule
+\\
+
+  Round & 6/17/14 & 1.62 & 2.31 &   5 & 0.45 & 2.70 & Small & Granular 2,4-D & Navigate & 183 & lbs & 4 & Lbs. per acre \\ 
+  & & & & & & & & Liquid 2,4-D & DMA IV & 51.3 & gallons & 3 & ppm \\   
+% % % % sandbar
+  Sandbar & 5/24/11 & 41.40 & 41.40 &   1 & 41.40 & 80.70 & Large & Liquid 2,4-D & DMA IV & 380.74 & gallons & 0.275 & ppm \\ 
+  Sandbar & 6/21/13 & 41.40 & 41.40 &   1 & 41.40 & 80.70 & Large & Liquid 2,4-D & DMA IV & 415.36 & gallons & 0.3 & ppm \\ 
+% % % % seven.island
+  Seven Island & 9/20/05 & 3.24 & 3.24 &   1 & 3.24 & 5.90 & Small & Granular 2,4-D & Navigate & 800 & lbs & 100 & Lbs. per acre \\ 
+% % % % silver
+  Silver & 5/22/07 & 5.26 & 5.26 &   1 & 5.26 & 22.60 & Large & Granular 2,4-D & Navigate & 1300 & lbs & 100 & Lbs. per acre \\ 
+  Silver & 5/15/09 & 1.38 & 1.38 &   1 & 1.38 & 5.90 & Small & Granular 2,4-D & Navigate & 510 & lbs & 150 & Lbs. per acre \\ 
+% % % % tomahawk
+  Tomahawk & 5/20/08 & 54.27 & 46.13 &   3 & 15.38 & 86.90 & Large & Liquid 2,4-D & DMA IV & 489.6 & gallons & 0.5 & ppm \\ 
+  Tomahawk & 9/27/11 & 1.86 & 1.86 &   1 & 1.86 & 3.50 & Small & Diquat & Reward & 7.5 & gallons & 0.37 & ppm \\ 
+  Tomahawk & 7/16/13 & 1.42 & 1.42 &   1 & 1.42 & 2.70 & Small & Liquid 2,4-D & DMA IV & 30 & gallons & 3 & ppm \\ 
+
+% % % % turtle
+  Turtle & \begin{tabular}{@{}ll@{}} 05/09/06 \\ 09/05/06 \end{tabular} & 1.34 & 0.73 &   5 & 0.16 & 1.20 & Small & Liquid 2,4-D & Weeder 64 & 1.75 & gallons & -- & -- \\ 
+  & & & & & & & & Granular 2,4-D & Navigate & 180 & lbs & 133.33 & Lbs. per acre \\ 
+  Turtle & \begin{tabular}{@{}ll@{}} 06/02/08 \\ 10/10/08 \end{tabular} & 3.72 & 3.48 &   7 & 0.49 & 6.10 & Small & Granular 2,4-D & Navigate & 725 & lbs & 120.83 & Lbs. per acre \\ 
+  & & & & & & & & Liquid 2,4-D & Weeder 64 & 13.8 & gallons & -- & -- \\ 
+  Turtle & 5/18/10 & 4.05 & 4.05 &   7 & 0.57 & 7.10 & Small & Liquid 2,4-D & AM-40 & 86 & gallons & 3 & ppm \\ 
+  Turtle & 5/26/11 & 6.07 & 2.91 &   6 & 0.49 & 5.10 & Small & Liquid 2,4-D & AM-40 & 52.75 & gallons & 3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 3.75 & gallons & 2 & ppm \\ 
+  Turtle & 5/20/13 & 10.12 & 7.12 &   7 & 1.01 & 12.50 & Large & Liquid 2,4-D & AM-40 & 202 & gallons & 2.5 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 22.5 & gallons & 1.5 & ppm \\ 
+  Turtle & 5/28/14 & 12.14 & 4.45 &  21 & 0.20 & 7.80 & Small & Granular 2,4-D & Navigate & 95.5 & lbs & 3 & Lbs. per acre \\  
+  & & & & & & & & Liquid 2,4-D & AM-40 & 204 & gallons & 3 & ppm \\ 
+  & & & & & & & & Liquid Endothall & Aquathol K & 10 & gallons & 2 & ppm \\  
+  & & & & & & & & Granular Endothall & \begin{tabular}{@{}ll@{}} Aquathol \\ Super K \end{tabular} & 14 & lbs & 2 & Lbs. per acre \\ 
+% % % % Underwood
+  Underwood & \begin{tabular}{@{}ll@{}} 05/11/07 \\ 07/16/07 \end{tabular} & 0.81 & 1.21 &   3 & 0.40 & 6.60 & Small & Granular 2,4-D & Navigate & 400 & lbs & 100 & Lbs. per acre \\ 
+  Underwood & 10/1/09 & 0.81 & 0.40 &   4 & 0.12 & 2.20 & Small & Granular 2,4-D & Navigate & 150 & lbs & 150 & Lbs. per acre \\ 
+
+\bottomrule
+\label{tab:managementHistory}
+\end{longtable}
+
+\end{landscape}
+
+
+\pagebreak
+\clearpage
+\bibliographystyle{C:/Users/fraterp/Documents/writing/references/ecology}
+\bibliography{C:/Users/fraterp/Documents/writing/references/refs}
+
+\begin{landscape}
+\section*{Appendix}
+
+
+\begin{table}[!ht]
+\centering
+\captionsetup{justification=raggedright}
+\caption{Websites and links for county land record online mapping systems used to determine the residential density of buildings surrounding lakes.}
+\label{tab:countyLandRecords}
+\begin{tabular}{lll}
+\toprule
+County & Website & Link \\ 
+\midrule
+Bayfield & http://maps.bayfieldcounty.org/BayfieldFlexViewer/ & \href{http://maps.bayfieldcounty.org/BayfieldFlexViewer/}{Bayfield Online Land Records} \\ 
+  Burnett & http://web.burnettcounty.org/access/master.asp & \href{http://web.burnettcounty.org/access/master.asp}{Burnett Online Land Records} \\ 
+  Fond du Lac & http://www.fdlco.wi.gov/departments/departments-f-m/land-information/online-maps & \href{http://www.fdlco.wi.gov/departments/departments-f-m/land-information/online-maps}{Fond du Lac Online Land Records} \\ 
+  Green Lake & http://gis.co.green-lake.wi.us/gisweb/GIS\_Viewer/ & \href{http://gis.co.green-lake.wi.us/gisweb/GIS_Viewer/}{Green Lake Online Land Records} \\ 
+  Lincoln & http://gismaps.co.lincoln.wi.us/website/LRPortal\_Public/ & \href{http://gismaps.co.lincoln.wi.us/website/LRPortal\_Public/}{Lincoln Online Land Records} \\ 
+  Oconto & http://ocmaps.co.oconto.wi.us/solo/ & \href{http://ocmaps.co.oconto.wi.us/solo/}{Oconto Online Land Records} \\ 
+  Oneida & http://ocgis.co.oneida.wi.us/oneida/main.do & \href{http://ocgis.co.oneida.wi.us/oneida/main.do}{Oneida Online Land Records} \\ 
+  Sawyer & http://tas.sawyercountygov.org/Access/master.asp & \href{http://tas.sawyercountygov.org/Access/master.asp}{Sawyer Online Land Records} \\ 
+  Shawano & http://gis.co.shawano.wi.us/portal/default.aspx & \href{http://gis.co.shawano.wi.us/portal/default.aspx}{Shawano Online Land Records} \\ 
+  Vilas & http://vcgis.co.vilas.wi.us/vmapp/ & \href{http://vcgis.co.vilas.wi.us/vmapp/}{Vilas Online Land Records} \\ 
+  Walworth & http://gisinfo.co.walworth.wi.us/map3x/index.html?config=config/walco.xml & \href{http://gisinfo.co.walworth.wi.us/map3x/index.html?config=config/walco.xml}{Walworth Online Land Records} \\ 
+\bottomrule
+\end{tabular}
+\end{table}
+\end{landscape}
+
+
+\end{document}
+
+
